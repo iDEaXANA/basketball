@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
-
-    <div id='ball'></div>
-    <div id='hoop'></div>
+    <div id="box">
+        <div id="scoreBox">
+            <p>SCORE COUNTER</p>
+            <div id="score">0</div>
+        </div>
+        <div id="attemptsbox">
+            <p>ATTEMPTS COUNTER</p>
+            <div id="attempts">0</div>
+        </div>
+    </div>
+    <h1 id="message"></h1>
+    <img id="ball" src="images/basketball.svg" draggable="false">
+    
+    <div >
+        <div id="ellipsehoop"></div>
+        <div id="net"></div>
+    </div>
+    <div id="backboard"></div>
     
 </body>
 </html>

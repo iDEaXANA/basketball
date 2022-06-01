@@ -1,18 +1,65 @@
-*{background-color:pink}
-body{height:100vh}
+body{
+    background-color: #333642;
+}
 
-#ball{background-color:orange;
-    width:100px;
-    height:100px;
-    border-radius:50%;
+#ball{
+    width:4vw;
+    height:4vw;
     position:absolute;
-    z-index:5
+    z-index:5;
+    user-select: none;
     }
 
-#hoop{position:absolute;
-    background-color:black;
-    width:200px;
-    height:10px;
-    left:500px;
-    top:300px;
-    z-index:10}
+#ellipsehoop{
+    background-color: transparent;
+    position: absolute;
+    left: 70%;
+    top: 47%;
+    height: 5%;
+    width: 10%;
+    border-radius: 100%;
+    border: solid red 5px;
+    z-index: 10;
+    }
+#net{
+    position: absolute;
+    left: 70.5%;
+    top: 50%;
+    width: 10%;
+    height: 20%;
+    z-index: 10;
+    background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    white 15px,
+    white 30px
+    );
+    clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+    }
+#net::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    white 15px,
+    white 30px
+    );
+}
+
+#box {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+
+#score,
+#attempts {
+    width: 100px;
+    background-color: white;
+    border: solid purple 2px;
+    border-radius: 10%;
+}
