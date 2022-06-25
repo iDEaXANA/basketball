@@ -60,7 +60,7 @@ function moveBall(){
 function resetBall() {
     ballDX = 0 //Velocity
     ballDY = 0
-    ballX = 10
+    ballX = 30
     ballY= 70
     ball.style.left= ballX + "%" //<-- you might want to change this
     ball.style.top= ballY + "%"
@@ -74,3 +74,16 @@ function throwBall(e){
     requestAnimationFrame(moveBall) // new 'best' way
     attemptShot()
 }
+
+let stands = document.getElementById("backboard")
+
+function generate(){
+    
+    for (let i=0; i<273; i++){
+        let box = document.createElement("div")
+        stands.appendChild(box)
+        box.className = "spectator"
+    }
+}
+
+generate()

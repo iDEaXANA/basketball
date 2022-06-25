@@ -1,0 +1,44 @@
+CSS:
+
+body{height:200vh;
+    width: 300vw;
+}
+
+#backboard {
+    border-bottom: 100vh solid rgb(8, 20, 189);
+	border-left: 14vw solid transparent;
+	border-right: 14vw solid transparent;
+	height: 0;
+	width: 80vw;
+    opacity: 0.5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spectator{
+    width: 50px;
+    height: 50px;
+    background-color:rgb(13, 223, 195);
+    margin: 10px;
+    border-radius: 50%;
+    background-image: url("/spectator.png");
+    background-size:cover;
+}
+
+HTML:
+ <div id='stands'></div>
+
+JS:
+
+let stands = document.getElementById("backboard")
+
+function generate(){
+    
+    for (let i=0; i<273; i++){
+        let box = document.createElement("div")
+        stands.appendChild(box)
+        box.className = "spectator"
+    }
+}
+
+generate()
